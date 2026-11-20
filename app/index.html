@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vice City Trophy Guide — GTA 6 Platinum Tracker</title>
+<meta name="description" content="The offline guide and tracker for all 55 GTA 6 PlayStation 5 trophies: official names, descriptions and grades, a 5-stage roadmap to the platinum, the one missable trophy flagged, and a cited guide for every trophy.">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<header class="masthead">
+  <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Offline guide &amp; tracker</p>
+  <h1><span class="neon-pink">Vice City</span> <span class="neon-cyan">Trophy Guide</span></h1>
+  <p class="lede">All 55 trophies &mdash; 1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; 28 hidden &middot; 1 missable. About 200 hours, difficulty 4/10, one playthrough, no online trophies.</p>
+  <div class="progress-wrap" id="progressWrap">
+    <div class="progress-big"><span id="earnedCount">0</span><span class="of"> / 55 earned</span></div>
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="grade-chips" id="gradeChips"></div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button type="button" data-tab="guide" class="tab active">Guide &amp; Tracker</button>
+    <button type="button" data-tab="roadmap" class="tab">Roadmap to Platinum</button>
+    <button type="button" data-tab="missables" class="tab">Missables &amp; Warnings</button>
+    <button type="button" data-tab="stats" class="tab">Stats &amp; Save</button>
+  </nav>
+</header>
+
+<main>
+  <section id="view-guide" class="view">
+    <div class="toolbar" id="toolbar">
+      <label class="field search-field">Search <input id="search" type="search" placeholder="Trophy, mission, character&hellip;" autocomplete="off"></label>
+      <label class="field">Kind
+        <select id="kindFilter">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="collectible">Collectibles</option>
+          <option value="activity">Activities</option>
+          <option value="crime">Crime</option>
+          <option value="exploration">Exploration</option>
+          <option value="money">Money</option>
+          <option value="misc">Misc</option>
+        </select>
+      </label>
+      <label class="field">Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="field">Sort
+        <select id="sortFilter">
+          <option value="default">Roadmap order</option>
+          <option value="name">Name A&ndash;Z</option>
+          <option value="grade">Grade (best first)</option>
+          <option value="stage">Roadmap stage</option>
+          <option value="progress">Progress first</option>
+        </select>
+      </label>
+      <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+      <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+      <label class="check spoiler-check"><input id="spoilerSafe" type="checkbox" checked> Spoiler-safe: hide hidden trophies until earned</label>
+    </div>
+    <p class="result-line" id="resultLine"></p>
+    <div class="guide-grid">
+      <div class="checklist" id="checklist" aria-label="Trophy checklist"></div>
+      <aside class="detail" id="detail" aria-label="Trophy guide"></aside>
+    </div>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>The road to the platinum</h2>
+    <p class="section-lede">Five stages, about 200 hours, difficulty 4/10. One playthrough is enough: there is no mission replay, but free roam continues after the story and nothing on the 100% checklist is missable. Save at the start of every chapter.</p>
+    <div id="roadmap"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <h2>Missables &amp; warnings</h2>
+    <div id="missables"></div>
+  </section>
+
+  <section id="view-stats" class="view" hidden>
+    <h2>Stats &amp; save</h2>
+    <p class="section-lede">Your progress lives in this browser only (localStorage). Export it to a file before you clear browser data, and import it back on any machine.</p>
+    <div class="stats-actions">
+      <button type="button" id="exportBtn">Export progress (.json)</button>
+      <label class="import-btn">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button type="button" id="demoBtn">Load demo progress</button>
+      <button type="button" id="resetBtn" class="danger">Reset all progress</button>
+    </div>
+    <p class="save-note" id="saveNote"></p>
+    <div id="stats"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Not affiliated with Rockstar Games or PlayStation. No Rockstar logo, artwork or screenshots are used. Trophy names and descriptions are shown as PlayStation publishes them; every guide is written in this entry's own words and cites its sources beside it.</p>
+  <p>Sources: PowerPyx, KeenGamer, GTA Zone, Exophase, PSNProfiles, GTABase. Works fully offline: this page fetches nothing from the network.</p>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
